@@ -1,0 +1,13 @@
+# This is the splash scene for the game
+var splash = function() {
+if (currentScene === 0){
+background(255, 255, 255);
+fill(0, 0, 0);
+textSize(24);
+text("Final Project Game", 92,75);
+drawBitmojiLogan(370,350,75);
+drawBitmojiEthan(30,350,75);
+btn1.draw();
+btn2.draw();
+}
+};
