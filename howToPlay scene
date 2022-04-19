@@ -1,0 +1,7 @@
+var howToPlay = function() {
+    background(255, 255, 255);
+    textSize(15);
+    text("Here's how to play this Final Project Game",60,60);
+    text("",60,80);
+    btn3.draw();
+};
