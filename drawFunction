@@ -1,0 +1,11 @@
+draw = function() {
+    if (currentScene === 0) {
+    splash();
+    }
+    else if (currentScene === 1) {
+    howToPlay();
+    }
+    else if (currentScene === 2) {
+    gameScreen();
+    }
+};
