@@ -1,0 +1,25 @@
+var leverUp = function() {
+    if (lever === true) {
+    noStroke();
+    fill(0, 0, 0);
+    quad(325,325,340,325,365,250,350,250);
+    ellipse(357,239,30,30);
+    }
+};
+var gameScreen = function() {
+    background(40, 94, 27);
+    noFill();
+    stroke(0, 0, 0);
+    strokeWeight(10);
+    rect(75,50,250,300);
+    fill(48, 48, 166);
+    rect(95,70,210,50);
+    textSize(25);
+    fill(255, 255, 255);
+    text('SLOTS',158,79);
+    fill(255, 255, 255);
+    rect(90,200,60,75);
+    rect(170,200,60,75);
+    rect(250,200,60,75);
+    leverUp();
+};
