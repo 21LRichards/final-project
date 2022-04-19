@@ -30,3 +30,30 @@ Button.prototype.handleMouseClick = function() {
         this.onClick();
     }
 };
+
+var btn1 = new Button({
+    x: 125,
+    y: 130,
+    label: "     Start",
+    onClick: function() {
+        currentScene = 2;
+    }
+});
+
+var btn2 = new Button({
+    x: 125,
+    y: 200,
+    label: "How to Play",
+    onClick: function() {
+        currentScene = 1;
+    }
+});
+
+var btn3 = new Button({
+    x: 225,
+    y: 310,
+    label: "      Back",
+    onClick: function() {
+        currentScene = 0;
+    }
+});
