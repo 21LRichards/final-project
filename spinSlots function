@@ -1,0 +1,12 @@
+var leverDown = function() {
+    noStroke();
+    fill(0, 0, 0);
+    quad(325,315,340,315,365,370,350,370);
+    ellipse(357,370,30,30);
+    lever = false;
+};
+var spinSlots = function() {
+    if (mouseX > 325 && mouseX < 360 && mouseY > 250 && mouseY < 350) {
+        leverDown();
+    }
+};
