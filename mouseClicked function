@@ -1,0 +1,12 @@
+mouseClicked = function() {
+    if (currentScene===0) {
+    btn1.handleMouseClick();
+    btn2.handleMouseClick();
+    }
+    else if (currentScene===1) {
+    btn3.handleMouseClick();
+    }
+    else if (currentScene===2) {
+    spinSlots();
+    }
+};
