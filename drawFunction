@@ -6,6 +6,11 @@ draw = function() {
     howToPlay();
     }
     else if (currentScene === 2) {
+    noLoop();
     gameScreen();
+    }
+    if (Score===0) {
+    textSize(30);
+    text("Game Over",117,144);
     }
 };
