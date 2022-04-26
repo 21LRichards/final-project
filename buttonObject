@@ -57,3 +57,56 @@ var btn3 = new Button({
         currentScene = 0;
     }
 });
+
+var btn4 = new Button({
+    x:125,
+    y:285,
+    label: "Click to Spin",
+    onClick: function() {
+        if (Lose !== true){
+        noFill();
+        stroke(0, 0, 0);
+        strokeWeight(10);
+        fill(255, 255, 255);
+        rect(90,200,60,75);
+        rect(170,200,60,75);
+        rect(250,200,60,75);
+        image(getImage(imageArray[rand1]), 95, 204,50,50);//changes the image for each slot
+        image(getImage(imageArray[rand2]), 175, 204,50,50);
+        image(getImage(imageArray[rand3]), 255, 204,50,50);
+        if (Score>0) {
+        Score = Score-10;
+        }
+        if (imageArray[rand1]===imageArray[rand2] && imageArray[rand1]===imageArray[rand3]) {
+            Score=Score+100;
+        }
+        if (imageArray[rand1]===imageArray[rand2] && imageArray[rand1] !== imageArray[rand3]) {
+            Score=Score+30;
+        }
+        if (imageArray[rand1]===imageArray[rand3] && imageArray[rand1] !== imageArray[rand2]) {
+            Score=Score+30;
+        }
+        if (imageArray[rand2]===imageArray[rand3] && imageArray[rand2] !== imageArray[rand1]) {
+            Score=Score+30;
+        } 
+        //these if statements figure out what score you should get based on the slot images
+        rand1 = round(random(0,5));
+        rand2 = round(random(0,5));
+        rand3 = round(random(0,5));
+        //sets the new slot images for next click
+        noStroke();
+        fill(40, 94, 27);
+        rect(10,10,150,30);
+        stroke(255, 255, 255);
+        fill(255, 255, 255);
+        textSize(25);
+        text("Score:" + Score,10,10);
+        if (Score <= 0) {
+        Lose=true;
+        fill(255, 0, 0);
+        textSize(50);
+        text("Game over",75,120);
+        }
+        }
+    }
+});
